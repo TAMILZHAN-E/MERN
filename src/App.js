@@ -272,6 +272,8 @@ import { useState,useEffect } from "react";
 import axios from 'axios'
 import StudentList from "./StudentList";
 import Paper from '@mui/material/Paper';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 function App(){
     const [students,setstudents]=useState([])
@@ -294,8 +296,13 @@ function App(){
                  <Paper elevation={6} style={{width:"55%",marginLeft:"23%",marginTop:"10%",paddingTop:"2%",height:"55vh",background:"linear-gradient(90deg,rgb(190 223 255),rgb(255 152 204))"}}>
                 <StudentList students={students} />   
                  </Paper>
-    
     }
+    <Paper elevation={6} style={{width:"30%",marginLeft:"35%",marginTop:"5%",paddingTop:"2%",height:"38vh",background:"linear-gradient(90deg,rgb(190 223 255),rgb(255 152 204))",marginBottom:"5%",textAlign:"center"}}>
+         <h4 style={{fontFamily:"sans-serif"}}>Add Here...</h4>
+         <TextField required  variant="outlined"  label="Name"  type="Name" /><br/><br />
+         <TextField required variant="outlined" label ="Age" type="number" /><br/><br/>
+        <Button variant={'contained'} >Add</Button>
+    </Paper>
     </>
   )
 }

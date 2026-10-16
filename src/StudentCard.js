@@ -5,8 +5,8 @@ const StudentCard = ({student}) => {
   return (
     <>
     <center>
-    <h2>Student Details🎓</h2><br/>
-    <table>
+    <h2>Student Details🎓</h2>
+    <table border={"1px solid black"}>
         <thead>
             <tr>
                 <th>Name</th>
